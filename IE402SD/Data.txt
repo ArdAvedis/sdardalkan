@@ -1,0 +1,2 @@
+Truck Size =75
+Number of Trucks =10
