@@ -1,2 +1,4 @@
-Truck Size =75
-Number of Trucks =10
+Truck Size=75
+Number of Trucks=10
+Number of Routes=50
+

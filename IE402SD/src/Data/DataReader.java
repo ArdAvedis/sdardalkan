@@ -7,8 +7,18 @@ public class DataReader {
 	private BufferedReader inputFile;
 	private ArrayList<String> dataRaw;
 	
+	public DataReader() {
+		openFile("Data.txt");
+		readFile();
+		closeFile();
+	}
+	
 
-	public void openFile(String fileName) {
+	public ArrayList<String> getDataRaw() {
+		return dataRaw;
+	}
+
+	private void openFile(String fileName) {
 		try {
 			inputFile = new BufferedReader(new FileReader(fileName));
 		} catch(FileNotFoundException e) {
@@ -16,7 +26,7 @@ public class DataReader {
 		}
 	}
 	
-	public void readFile() {
+	private void readFile() {
 		String line;
 		try {
 			while((line = inputFile.readLine()) != null) {
@@ -28,7 +38,7 @@ public class DataReader {
 	}
 	
 	
-	public void closeFile() {
+	private void closeFile() {
 		try {
 			inputFile.close();
 		} catch (IOException e) {
