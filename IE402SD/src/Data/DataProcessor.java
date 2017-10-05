@@ -10,18 +10,20 @@ public class DataProcessor {
 		this.dataRaw = dataRaw;
 	}
 	
-	public double readTruckSize() {
+	public int getTruckSize() {
 		Scanner sc = new Scanner(dataRaw.get(0));
 		sc.useDelimiter("=");
 		while(sc.hasNext()) {
 			if (sc.hasNextDouble()) {
-				return sc.nextDouble();
-			} else {
+				sc.close();
+				return sc.nextInt();
+			} else 
 				sc.next();
-			}
 		}
 		sc.close();
 		return 0;
 	}
+	
+	
 	
 }
