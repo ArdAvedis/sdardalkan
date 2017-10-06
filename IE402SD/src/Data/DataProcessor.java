@@ -21,6 +21,7 @@ public class DataProcessor {
 				sc.next();
 		}
 		sc.close();
+		System.out.println("Arda");
 		return truckSize;
 	}
 	
