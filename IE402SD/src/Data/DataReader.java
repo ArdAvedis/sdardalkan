@@ -8,6 +8,8 @@ public class DataReader {
 	private ArrayList<String> dataRaw;
 	
 	public DataReader() {
+		dataRaw = new ArrayList<String>();
+		
 		openFile("Data.txt");
 		readFile();
 		closeFile();

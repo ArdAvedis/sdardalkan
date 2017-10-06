@@ -11,17 +11,17 @@ public class DataProcessor {
 	}
 	
 	public int getTruckSize() {
+		int truckSize = 0;
 		Scanner sc = new Scanner(dataRaw.get(0));
 		sc.useDelimiter("=");
 		while(sc.hasNext()) {
 			if (sc.hasNextDouble()) {
-				sc.close();
-				return sc.nextInt();
+				truckSize = sc.nextInt();
 			} else 
 				sc.next();
 		}
 		sc.close();
-		return 0;
+		return truckSize;
 	}
 	
 	
