@@ -15,7 +15,7 @@ public class DataProcessor {
 		Scanner sc = new Scanner(dataRaw.get(0));
 		sc.useDelimiter("=");
 		while(sc.hasNext()) {
-			if (sc.hasNextDouble()) {
+			if (sc.hasNextInt()) {
 				truckSize = sc.nextInt();
 			} else 
 				sc.next();

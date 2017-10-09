@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import Data.DataProcessor;
 import Data.DataReader;
 

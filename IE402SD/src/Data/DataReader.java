@@ -24,7 +24,7 @@ public class DataReader {
 		try {
 			inputFile = new BufferedReader(new FileReader(fileName));
 		} catch(FileNotFoundException e) {
-			System.out.println();
+			System.out.println("File not found!");
 		}
 	}
 	
