@@ -7,6 +7,7 @@ public class Main {
 		DataReader dataReader = new DataReader();
 		DataProcessor dataProcessor = new DataProcessor(dataReader.getDataRaw());
 		
+		System.out.println("Alkan deneme!!!");
 		System.out.println(dataProcessor.getTruckSize());
 	}
 }
