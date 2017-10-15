@@ -1,2 +1,5 @@
-Truck Size=75
-Number of Routes=100
+Truck Size=75;
+Number Of Orders=13;
+Number Of Routes=30;
+Order Size=10,12,35,21,14,45,21,35,26,43,21,39,24;
+Cost Of Route=;

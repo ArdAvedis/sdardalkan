@@ -2,9 +2,10 @@ package Data;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DataReader {
-	private BufferedReader inputFile;
+	private Scanner inputFile;
 	private ArrayList<String> dataRaw;
 	
 	public DataReader() {
@@ -22,32 +23,21 @@ public class DataReader {
 
 	private void openFile(String fileName) {
 		try {
-			inputFile = new BufferedReader(new FileReader(fileName));
+			inputFile = new Scanner(new FileReader(fileName));
 		} catch(FileNotFoundException e) {
 			System.out.println("File not found!");
 		}
 	}
 	
 	private void readFile() {
-		String line;
-		try {
-			while((line = inputFile.readLine()) != null) {
-				dataRaw.add(line);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
+		inputFile.useDelimiter(";");
+		while(inputFile.hasNext()) {
+			dataRaw.add(inputFile.next());
 		}
 	}
 	
 	
 	private void closeFile() {
-		try {
-			inputFile.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	
-	
+		inputFile.close();
+	}	
 }
