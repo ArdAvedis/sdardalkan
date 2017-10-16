@@ -69,9 +69,9 @@ public class DataProcessor {
 	
 	public double[] getOrderSize() {
 		double[] orderSize = new double[getNumberOfOrders()];
-		Scanner sc = new Scanner(dataRaw.get(4));
-		sc.useDelimiter("=");
-		sc.next();
+		String oSString = dataRaw.get(4);
+		String[] splitOS = oSString.split("=");
+		Scanner sc = new Scanner(splitOS[1]);
 		sc.useDelimiter(",");
 		int i=0;
 		while(sc.hasNext()) {
